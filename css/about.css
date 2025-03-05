@@ -1,0 +1,33 @@
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+}
+.about .left {
+    width: 15%;
+    position: relative;
+    margin-right: 30%;
+    margin-left: 10%;
+}
+.about .left img {
+    position: relative;
+    width: 280%;
+    left: 0;
+    top: 0;
+}
+.about .right p {
+    font-size: 18px;
+    color: grey;
+    line-height: 1.6;
+    text-align: left;
+    max-width: 900px;
+    margin-right: 20%;
+}
+.about .right h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 2%;
+    color: #0033cc;
+    text-transform: uppercase;
+}

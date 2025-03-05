@@ -1,0 +1,139 @@
+.footer .container{
+    position: relative; /* Added to create stacking context */
+}
+.footer .background {
+    z-index: 1;
+    position: absolute;
+    background: url("/images/bg-footer.png") center/cover no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.footer .background::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 97%;
+
+    /* Gradient màu tím-xanh */
+    background: linear-gradient(180deg, rgba(103, 58, 183, 0.9), rgba(63, 81, 181, 0.9));
+
+    /* Đè lên ảnh nền */
+    z-index: 2;
+}
+.footer h2 {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-align: center; /* Add this line to center the h2 */
+}
+.footer .content {
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 50px 0;
+    color: white;
+}
+/* Slick Carousel */
+.footer-carousel {
+    width: 40%; /* Increased width to allow more space for sliding */
+    height: 100px; /* Reduced height to fit in footer */
+    top: -60px; /* Align to top of container */
+    margin: auto;
+    padding: 0 30px; /* Adjust padding for better horizontal alignment */
+    position: relative;
+    z-index: 5;
+    overflow: visible !important; /* Allow slides to be visible outside container */
+    padding: 30px 0; /* Adjust padding for better vertical alignment */
+}
+
+/* Mỗi mục trong carousel */
+.footer-component {
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border: 2px solid rgba(255, 255, 255, 0.4); /* Slightly more visible border */
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0.5;
+    transition: all 0.4s ease, opacity 0.5s ease, border-color 0.3s ease; /* Add border transition */
+    margin: 10px; /* Add vertical margin */
+    position: relative;
+    z-index: 10;
+    background-color: transparent;
+    transform: scale(0.9); /* Slightly smaller for non-active slides */
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2); /* Inner border glow */
+}
+
+/* Active slide styles */
+.slick-center .footer-component {
+    border: 2px solid #ffffff; /* Bright white border */
+    border-width: 2px; /* Ensure consistent border width */
+    opacity: 0.;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transform: scale(1); /* Full size for active slide */
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: none; /* No inner glow for active slide */
+}
+
+/* Adjust border visibility based on slide position */
+.slick-slide.slick-active .footer-component {
+    border-color: white; /* More visible border for active slides */
+}
+
+.slick-slide.slick-active + .slick-slide.slick-active .footer-component {
+    border-color: rgba(255, 255, 255, 0.6); /* Even more visible border for slides near center */
+}
+
+/* Non-active slides get very faint borders */
+.slick-slide:not(.slick-active) .footer-component {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Vertical fade effect for slides */
+.footer-carousel .slick-track {
+    padding: 20px 0; /* Adjust padding for better vertical alignment */
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Simplified opacity rules */
+.slick-slide {
+    transition: all 0.5s ease;
+    opacity: 0 !important; /* Hidden by default */
+    transform: translateY(0);
+    margin: 5px 0;
+}
+
+.slick-slide.slick-active {
+    opacity: 0.4 !important; /* Slightly visible */
+}
+
+.slick-slide.slick-active.slick-center {
+    opacity: 1 !important; /* Fully visible */
+}
+
+/* Remove any remaining horizontal fade effects */
+.footer-carousel::before,
+.footer-carousel::after {
+    display: none;
+}
+
+/* Enhanced vertical fade effect using only opacity */
+.footer-carousel .slick-list {
+    overflow: visible !important; /* Allow items to be visible outside the container */
+    padding-top: 20px 0 !important;
+}

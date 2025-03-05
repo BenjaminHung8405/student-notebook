@@ -1,0 +1,79 @@
+.training {
+    position: relative;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.training .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Đưa nội dung về bên trái */
+    height: 100%;
+    padding-left: 10%;
+}
+.training .content {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Căn nội dung về bên trái */
+    gap: 50px;
+}
+.training .text {
+    max-width: 600px;
+    width: 100%;
+}
+.training .text h2 {
+    color: #0033cc;
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+.training .text ul {
+    list-style: none;
+    padding: 0;
+}
+.training .text ul li {
+    display: flex;
+    color: grey;
+    align-items: flex-start;
+    gap: 10px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    position: relative;
+}
+.training .text ul li::before {
+    content: "";
+    position: absolute;
+    align-items: start;
+    left: 0;
+    top: 10%;
+    /* transform: translateY(-50%); */
+    width: 20px;
+    height: 20px;
+    background-color: #8443d8; /* Màu xanh */
+    border-radius: 20%; /* Làm tròn */
+}
+.training .image {
+    position: relative;
+    max-width: 50%;
+    z-index: 1;
+}
+.training .image img {
+    position: relative;
+    right: -30%;
+    z-index: 2; /* Đảm bảo ảnh minh họa nằm trên */
+    max-width: 70%;
+}
+.training .background {
+    position: absolute;
+    right: -120px;
+    width: 600px; /* Đảm bảo có kích thước */
+    height: 600px; /* Thêm chiều cao */
+    background: url("/images/bg-training.png") no-repeat right bottom;
+    background-size: contain;
+    z-index: -1;
+}

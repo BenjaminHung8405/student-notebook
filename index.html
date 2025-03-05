@@ -7,14 +7,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <!-- Slick slider -->
-    <link rel="stylesheet" href="slick/slick.css">
-    <script src="slick/slick.min.js"></script>
+    <link rel="stylesheet" href="/js/slick/slick.css">
+    <link rel="stylesheet" href="/js/slick/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/slick/slick.min.js"></script>
     <!-- End slick -->
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/training.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/opportunity.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
 </head>
+
 <body>
+
+    <!-- WEB BAR -->
     <header class="header">
             <div class="logo">
                 <a href="index.html">
@@ -28,6 +48,8 @@
                 <li><a href="contact.html">Cơ hội việc làm</a></li>
             </ul>
     </header>
+
+
     <section class="banner">
             <div class="left">
                 <h1 class="name">NGÀNH KỸ THUẬT PHẦN MỀM</h1>
@@ -38,7 +60,9 @@
             <img src="images/icon-banner.png" alt="">
         </div>
     </section>
-    <section class="about">
+
+    <!-- ABOUT -->
+    <div class="about">
         <div class="left">
             <img src="images/icon-about.png" alt="">    
         </div>
@@ -51,9 +75,12 @@
                 hệ thống phần mềm đáp ứng nhu cầu thực tế.
             </p>
         </div>
-    </section>
-    <section class="training">
+    </div>
+
+    <!-- TRAINING -->
+    <div class="training">
         <div class="container">
+            <div class="background"></div>
             <div class="content">
                 <div class="text">
                     <h2>Mục tiêu đào tạo</h2>
@@ -64,11 +91,123 @@
                     </ul>
                 </div>
                 <div class="image">
-                    <div class="background"></div>
                     <img src="images/icon-tranining.png" alt="">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact">
+        <div class="container">
+            <div class="background"></div>
+            <div class="content">
+                <i class="fa-solid fa-headset"></i>
+                <div class="form-container">
+                    <h2 class="form-title">ĐĂNG KÝ TƯ VẤN</h2>
+                    <form>
+                        <div class="form-group">
+                            <div class="input-box">
+                                <input type="text" class="input-field" placeholder="Họ và Tên">
+                            </div>
+                            <div class="input-box">
+                                <input type="email" class="input-field" placeholder="Email">
+                            </div>
+                            <div class="input-box">
+                                <input type="text" class="input-field" placeholder="Số điện thoại">
+                            </div>
+                            <div class="input-box">
+                                <input type="text" class="input-field" placeholder="Tên Trường cấp 3">
+                            </div>
+                            <div class="textarea-box">
+                                <textarea class="input-field" placeholder="Nội dung muốn tư vấn"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">GỬI YÊU CẦU TƯ VẤN</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- OPPORTUNITY -->
+    <div class="opportunity">
+        <div class="container">
+            <div class="content">
+                <h2>CƠ HỘI NGHỀ NGHIỆP</h2>
+                <p1>Khi học ngành Kỹ thuật phần mềm, sau khi ra trường bạn có thể xin việc trong các ngành nghề sau:</p1>
+                
+                <div class="job-list">
+                    <div class="job-item">
+                        <img src="/images/thumbnail-1.png" alt="Giám đốc kỹ thuật">
+                        <div class="job-info">
+                            <div class="job-title">Giám đốc kỹ thuật</div>
+                            <div class="job-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="job-item">
+                        <img src="/images/thumbnail-2.png" alt="Quản lý dự án (PM)">
+                        <div class="job-info">
+                            <div class="job-title">Quản lý dự án (PM)</div>
+                            <div class="job-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="job-item">
+                        <img src="images/thumbnail-3.png" alt="Lập trình viên (Coder)">
+                        <div class="job-info">
+                            <div class="job-title">Lập trình viên (Coder)</div>
+                            <div class="job-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="job-item">
+                        <img src="images/thumbnail-4.png" alt="Kỹ sư cầu nối (BrSE)">
+                        <div class="job-info">
+                            <div class="job-title">Kỹ sư cầu nối (BrSE)</div>
+                            <div class="job-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="job-item">
+                        <img src="images/thumbnail-5.png" alt="Kiểm thử phần mềm (Tester)">
+                        <div class="job-info">
+                            <div class="job-title">Kiểm thử phần mềm (Tester)</div>
+                            <div class="job-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="job-item">
+                        <img src="images/thumbnail-6.png" alt="Kỹ sư đảm bảo chất lượng phần mềm">
+                        <div class="job-info">
+                            <div class="job-title">Kỹ sư đảm bảo chất lượng phần mềm</div>
+                            <div class="job-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p2>Ngoài ra bạn cũng có thể tiếp tục học sau đại học chuyên ngành Công nghệ Thông tin tại Trường Đại học An Giang để tiếp tục nâng cao kiến thức chuyên môn và mở ra nhiều cơ hội nghề nghiệp trong tương lai.</p2>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="container">
+            <div class="background"></div>
+            <div class="content">
+                <h2>NHỮNG TỐ CHẤT PHÙ HỢP VỚI NGÀNH KỸ THUẬT PHẦN MỀM</h2>
+                <div class="footer-carousel">
+                    <div class="footer-component">Có trí thông minh và khả năng sáng tạo</div>
+                    <div class="footer-component">Nhanh nhẹn, nhạy bén và có khả năng tư duy tốt</div>
+                    <div class="footer-component">Ham học hỏi và cập nhật kiến thức mới liên tục</div>
+                    <div class="footer-component">Chịu áp lực tốt và kiên trì</div>
+                    <div class="footer-component">Khả năng làm việc nhóm và giao tiếp tốt</div>
+                </div>
+            </div>
+    </div>
+      
 </body>
 </html>
