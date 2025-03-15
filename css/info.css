@@ -1,0 +1,24 @@
+.info {
+    background: #fff;
+    padding: 30px 20px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+.info h2 {
+    color: hsl(211, 100%, 35%);
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.info p {
+    margin: 5px 0;
+    color: #333;
+    font-size: 14px;
+}
+.info a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+.info a:hover {
+    text-decoration: underline;
+}
