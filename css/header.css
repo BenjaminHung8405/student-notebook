@@ -35,6 +35,7 @@ body.no-scroll {
 
 .header .menu li {
     list-style: none;
+    padding: 0 30px;
 }
 
 .header .menu li a {
@@ -48,6 +49,22 @@ body.no-scroll {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+/* Hiệu ứng nút menu */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1001; /* Ensure it stays above the menu */
+}
+
+.menu-toggle.active {
+    transform: rotate(90deg);
 }
 
 /* Mobile Drawer Menu */
@@ -105,18 +122,26 @@ body.no-scroll {
     }
 }
 
-/* Hiệu ứng nút menu */
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: white;
-    transition: transform 0.3s ease-in-out;
-    z-index: 1001; /* Ensure it stays above the menu */
+@media (max-width: 992px) {
+    .header .logo {
+        width: 30%;
+    }
+    .header .menu li {
+        padding: 0 10px;
+    }
+    .header .menu li a {
+        font-size: 16px;
+    }
 }
 
-.menu-toggle.active {
-    transform: rotate(90deg);
+@media (max-width: 576px) {
+    .header .logo {
+        width: 40%;
+    }
+    .header .menu li {
+        padding: 0 5px;
+    }
+    .header .menu li a {
+        font-size: 14px;
+    }
 }

@@ -31,3 +31,73 @@
     color: #0033cc;
     text-transform: uppercase;
 }
+
+@media (max-width: 992px) {
+    .about {
+        padding: 50px 30px;
+    }
+    .about .left {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        text-align: center;
+    }
+    .about .left img {
+        width: 70%;
+        height: auto;
+    }
+    .about .right {
+        width: 100%;
+        text-align: center;
+    }
+    .about .right p {
+        font-size: 16px;
+        margin: 0 auto;
+    }
+    .about .right h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 30px 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about .left {
+        width: 70%;
+        margin-right: 0;
+        margin-left: 0;
+        text-align: center;
+    }
+    .about .left img {
+        width: 30%;
+    }
+    .about .right {
+        width: 100%;
+        text-align: center;
+        padding: 0 20px;
+    }
+    .about .right p {
+        font-size: 14px;
+    }
+    .about .right h2 {
+        font-size: 22px;
+    }
+}
+@media (max-width: 576px) {
+    .about {
+        padding: 20px 10px;
+    }
+    .about .left img {
+        width: 90%;
+    }
+    .about .right p {
+        font-size: 12px;
+    }
+    .about .right h2 {
+        font-size: 20px;
+    }
+}
