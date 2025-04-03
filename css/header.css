@@ -6,10 +6,25 @@
     position: absolute;
     width: 100%;
     padding: 20px;
+    z-index: 1000; /* Ensure header stays above other content */
+}
+
+/* No scroll for body when drawer is active */
+body.no-scroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
 }
 
 .header .logo {
-    width: 150px;
+    width: 30%;
+}
+
+.header .logo img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .header .menu {
@@ -20,53 +35,82 @@
 
 .header .menu li {
     list-style: none;
-    margin: 15px;
+    margin: 0 40px;
 }
 
 .header .menu li a {
     text-decoration: none;
-    color: #ffffff;
+    color: white;
+    font-size: 18px;
     text-transform: uppercase;
 }
 
 /* Mobile Drawer Menu */
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
     .header .menu {
-        display: none;
+        display: flex;
         flex-direction: column;
         position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: #333;
-        padding: 20px 0;
+        top: 0;
+        right: -100%;
+        width: 90%;
+        height: 100vh;
+        background: white;
         text-align: center;
+        padding: 80px 0 20px;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
     }
-    
+
     .header .menu.active {
-        display: flex;
+        right: 0;
     }
 
     .header .menu li {
-        margin: 10px 0;
+        margin: 15px 0;
+        width: 100%;
     }
+
+    .header .menu li a {
+        display: block;
+        padding: 10px;
+        font-size: 18px;
+        color: #000;
+    }
+
+    .header .menu li a:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .header .logo {
+        width: 80%;
+    }
+
+    .header .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: white;
+    }
+    
+    .header .menu-toggle.active {
+        color: black;
+    }
+}
+
+/* Hiệu ứng nút menu */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1001; /* Ensure it stays above the menu */
+}
+
+.menu-toggle.active {
+    transform: rotate(90deg);
 }
