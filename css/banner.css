@@ -38,6 +38,7 @@
 .banner .right {
     width: 50%;
     position: relative;
+    top: 400px;
 }
 .banner .right img {
     position: absolute;
@@ -67,12 +68,7 @@
         font-size: 28px;
     }
     .banner .right {
-        width: 40%;
-        position: relative;
-        margin-top: 40%;
-    }
-    .banner .right img {
-        width: 100%;
+        width: 60%;
     }
 }
 
@@ -80,7 +76,7 @@
     .banner {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
         min-height: 600px;
     }
     .banner .left {
@@ -100,12 +96,10 @@
     }
     .banner .right {
         width: 100%;
-        position: relative;
-        margin-top: 300px;
+        top: 300px;
     }
     .banner .right img {
-        width: 80%;
-        bottom: 50px;
+        width: 50%;
     }
 }
 
@@ -113,7 +107,7 @@
     .banner {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
         min-height: 500px;
     }
     .banner .left .name {
@@ -127,6 +121,6 @@
     }
     .banner .right img {
         width: 70%;
-        bottom: 0;
+        bottom: 100px;
     }
 }

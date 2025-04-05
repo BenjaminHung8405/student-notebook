@@ -2,6 +2,7 @@
     position: relative; /* Added to create stacking context */
     align-items: center;
     justify-items: center;
+    margin-bottom: 9%;
 }
 .contact .background {
     z-index: 1;
@@ -126,4 +127,25 @@
 .contact .submit-btn:hover {
     background: white;
     color: #673AB7;
+}
+
+@media (max-width: 992px) {
+    .contact .background {
+        background: url("/images/bg-contact.png") center/cover no-repeat;
+        aspect-ratio: 16/9; /* Nếu ảnh có tỉ lệ 16:9 */
+    }
+}
+
+@media (max-width: 768px) {
+    .contact .background {
+        background: url("/images/bg-contact.png") center/cover no-repeat;
+        aspect-ratio: 7/6; /* Nếu ảnh có tỉ lệ 4:3 */
+    }
+}
+
+@media (max-width: 576px) {
+    .contact .background {
+        background: url("/images/bg-contact.png") center/cover no-repeat;
+        aspect-ratio: 1/1; /* Nếu ảnh có tỉ lệ 1:1 */
+    }
 }

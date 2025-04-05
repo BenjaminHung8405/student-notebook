@@ -73,7 +73,8 @@
         text-align: center;
     }
     .about .left img {
-        width: 30%;
+        width: 70%;
+        margin-bottom: 50px;
     }
     .about .right {
         width: 100%;

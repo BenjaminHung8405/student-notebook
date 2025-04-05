@@ -71,9 +71,43 @@
 .training .background {
     position: absolute;
     right: -120px;
-    width: 600px; /* Đảm bảo có kích thước */
-    height: 600px; /* Thêm chiều cao */
+    width: 45%; /* Đảm bảo có kích thước */
+    height: 90%; /* Thêm chiều cao */
     background: url("/images/bg-training.png") no-repeat right bottom;
     background-size: contain;
     z-index: -1;
+}
+
+@media (max-width: 992px) {
+    .training .background {
+        width: 450px;
+    }
+    .training .image img {
+        max-width: 100%;
+        right: -10%;
+    }
+    .training .text ul li {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .training .content {
+        justify-content: center;
+    }
+    .training .background {
+        display: none;
+    }
+    .training .image img {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .training .text h2 {
+        font-size: 24px;
+    }
+    .training .text ul li {
+        font-size: 16px;
+    }
 }
