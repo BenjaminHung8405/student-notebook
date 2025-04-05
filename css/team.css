@@ -60,3 +60,59 @@
 .bracket.right {
     margin-left: -20px;
 }
+
+@media (max-width: 992px) {
+    .team-section {
+        padding: 20px;
+    }
+
+    .member {
+        margin-bottom: 20px; /* Add space between members */
+    }
+
+    .member img {
+        width: 60px; /* Adjust image size for smaller screens */
+        height: 60px;
+    }
+
+    .member-info h3 {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .member-info p {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+    .member-info p1 {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+    .bracket {
+        font-size: 80px; /* Adjust bracket size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .members-container {
+        flex-direction: column; /* Stack members vertically on smaller screens */
+        align-items: center;
+    }
+
+    .member-info h3 {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+    .member-info p {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+    .member-info p1 {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .member {
+        margin-bottom: 20px; /* Add space between members */
+    }
+
+    .bracket {
+        display: none; /* Hide brackets on smaller screens */
+    }
+}

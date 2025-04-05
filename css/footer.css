@@ -1,161 +1,139 @@
-.footer .container{
-    position: relative; /* Added to create stacking context */
+/* Footer Optimization */
+.footer .container {
+    position: relative;
     margin-bottom: 9%;
 }
+
 .footer .background {
     z-index: 1;
     position: absolute;
-    background: url("/images/bg-footer.png") center/cover no-repeat;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("/images/bg-footer.png") center/contain no-repeat;
     width: 100%;
-    height: 157%;
+    aspect-ratio: 34/9;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
 }
+
 .footer .background::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 97%;
-
-    /* Gradient màu tím-xanh */
     background: linear-gradient(180deg, rgba(103, 58, 183, 0.9), rgba(63, 81, 181, 0.9));
-
-    /* Đè lên ảnh nền */
     z-index: 2;
 }
+
 .footer h2 {
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 30px;
     letter-spacing: 1px;
-    text-align: center; /* Add this line to center the h2 */
+    text-align: center;
 }
+
 .footer .content {
     z-index: 3;
-    align-items: center;
-    justify-content: center;
     position: relative;
     padding: 50px 0;
     color: white;
-}
-/* Slick Carousel */
-.footer-carousel {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 40%; /* Increased width to allow more space for sliding */
-    height: 100px; /* Reduced height to fit in footer */
-    padding: 0 30px; /* Adjust padding for better horizontal alignment */
+    justify-content: start;
+}
+
+/* Carousel optimization */
+.footer-carousel {
+    width: 80%;
+    max-width: 1200px;
     position: relative;
     z-index: 5;
-    overflow: visible !important; /* Allow slides to be visible outside container */
-    margin-top: 50px; /* Increased spacing between title and carousel */
+    overflow: visible !important;
 }
 
-/* Center the carousel in the footer */
-.footer .footer-carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    text-align: center;
-    width: 80%; /* You can adjust this value based on your design needs */
-    max-width: 1200px;
-}
-
-/* Mỗi mục trong carousel */
 .footer-component {
-    align-items: center;
-    justify-content: center;
     padding: 15px 30px;
-    border: 2px solid rgba(255, 255, 255, 0.4); /* Slightly more visible border */
+    border: 2px solid rgba(255, 255, 255, 0.4);
     border-radius: 30px;
     font-size: 20px;
     font-weight: 600;
     text-align: center;
     opacity: 0.5;
-    transition: all 0.4s ease, opacity 0.5s ease, border-color 0.3s ease; /* Add border transition */
-    margin: 10px; /* Add vertical margin */
-    position: relative;
-    z-index: 10;
+    transition: all 0.3s ease;
+    margin: 10px;
     background-color: transparent;
-    transform: scale(0.9); /* Slightly smaller for non-active slides */
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2); /* Inner border glow */
+    transform: scale(0.9);
+    box-shadow: none; /* Loại bỏ box-shadow mặc định */
 }
 
-/* Style the carousel components */
-.footer .footer-component {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 30px;
-}
-
-/* Active slide styles */
+/* Active slide styles - simplified */
 .slick-center .footer-component {
-    padding: 30px 60px; /* Increased padding for active slide */
-    border: 2px solid #ffffff; /* Bright white border */
-    border-width: 2px; /* Ensure consistent border width */
-    opacity: 1;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    transform: scale(1); /* Full size for active slide */
-    background-color: rgba(255, 255, 255, 0.05);
-    box-shadow: none; /* No inner glow for active slide */
+    padding: 20px 40px;
+    border-color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Thêm glow effect nhẹ */
 }
 
-/* Adjust border visibility based on slide position */
-.slick-slide.slick-active .footer-component {
-    border-color: white; /* More visible border for active slides */
-}
-
-.slick-slide.slick-active + .slick-slide.slick-active .footer-component {
-    border-color: rgba(255, 255, 255, 0.6); /* Even more visible border for slides near center */
-}
-
-/* Non-active slides get very faint borders */
-.slick-slide:not(.slick-active) .footer-component {
-    border-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Vertical fade effect for slides */
-.footer-carousel .slick-track {
-    padding: 20px 0; /* Adjust padding for better vertical alignment */
-    display: flex !important;
-    flex-direction: column !important;
-}
-
-/* Simplified opacity rules */
+/* Simplified slide visibility */
 .slick-slide {
-    transition: all 0.5s ease;
-    opacity: 0 !important; /* Hidden by default */
-    transform: translateY(0);
+    opacity: 0 !important;
+    transition: opacity 0.4s ease;
     margin: 5px 0;
 }
-
-.slick-slide.slick-active {
-    opacity: 0.4 !important; /* Slightly visible */
+.slick-slide.slick-active .footer-component {
+    border-color: rgba(255, 255, 255, 0.5); /* Border rõ hơn một chút cho slide active */
+}
+.slick-center + .slick-slide .footer-component,
+.slick-slide + .slick-center .footer-component {
+    border-color: rgba(255, 255, 255, 0.4); /* Border mờ hơn một chút cho slide gần center */
+}
+/* Các slide ở xa hơn */
+.slick-slide:not(.slick-active) .footer-component {
+    border-color: rgba(255, 255, 255, 0.1); /* Border rất mờ cho slide không active */
+}
+.footer-component:hover {
+    border-color: rgba(255, 255, 255, 0.8); /* Border sáng hơn khi hover */
+}
+.slick-active {
+    opacity: 0.4 !important;
 }
 
-.slick-slide.slick-active.slick-center {
-    opacity: 1 !important; /* Fully visible */
+.slick-center {
+    opacity: 1 !important;
 }
 
-/* Remove any remaining horizontal fade effects */
-.footer-carousel::before,
-.footer-carousel::after {
-    display: none;
+/* Media queries */
+@media (max-width: 992px) {
+    .footer h2 {
+        font-size: 18px;
+    }
+    .footer .footer-carousel {
+        top: -50px;
+    }
+    .footer-component {
+        font-size: 14px;
+    }
 }
 
-/* Enhanced vertical fade effect using only opacity */
-.footer-carousel .slick-list {
-    overflow: visible !important; /* Allow items to be visible outside the container */
-    padding-top: 20px 0 !important;
+@media (max-width: 768px) {
+    .footer h2 {
+        font-size: 16px;
+    }
+    .footer .footer-carousel {
+        top: -50px;
+    }
+    .footer-component {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
+@media (max-width: 576px) {
+    .footer h2 {
+        font-size: 12px;
+    }
+    .footer-component {
+        padding: 8px 16px;
+        font-size: 10px;
+    }
 }
